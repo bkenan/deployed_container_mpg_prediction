@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>House Price Prediction</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{{ url_for('static', filename='css/custom.css') }}">
+</head>
+
+<body>
+    <div class="register_page">
+        <img alt="MPG" src="{{ url_for('static', filename='images/mpg3.jpg') }}">
+        <div class="form">
+            <form action="{{url_for('predict')}}" method="POST">
+                <h3>Miles per gallon prediction app</h3>
+                <br>
+                <hr>
+                Cylinders: <input type="number" name='cylinders' placeholder="Enter the no of cylinders"><br>
+                Displacement: <input type="number" name='displacement' placeholder="Enter the no of displacement"><br>
+                Horsepower: <input type="number" name='horsepower' placeholder="Enter the no of horsepower"><br>
+                Weight: <input type="number" name='weight' placeholder="Enter year of weight"><br>
+                Acceleration: <input type="number" name='acceleration' placeholder="Enter year of acceleration"><br>
+                Year: <input type="number" name='year' placeholder="Enter year of year"><br>
+                <input type="submit" value="predict" class="submit">
+            </form>
+            <p> Miles per gallon is: {{data}}</p>
+            <li>
+                <a href="{{ url_for('index') }}">Get another prediction</a>
+            </li>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
