@@ -12,7 +12,7 @@ This application uses some car information such as'cylinders','displacement','ho
 
 1. Create virtual environment: python3 -m venv ~/.app
 2. Source it: source ~/.app/bin/activate
-3. Make all
+3. make all
 
 ## ECR screenshot
 
